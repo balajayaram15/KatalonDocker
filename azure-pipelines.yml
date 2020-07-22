@@ -10,10 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -apiKey="cd477bb3-ed05-45c4-9610-dd3fc8252217" -testSuitePath="Test Suites/TS_RegressionTest"
+- script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -apiKey='cd477bb3-ed05-45c4-9610-dd3fc8252217' -testSuitePath="Test Suites/TS_RegressionTest"
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
