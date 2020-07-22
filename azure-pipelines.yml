@@ -12,5 +12,7 @@ pool:
 steps:
 - script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -apiKey='cd477bb3-ed05-45c4-9610-dd3fc8252217' -testSuitePath="Test Suites/TS_RegressionTest"
   displayName: 'Run a one-line script'
-
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
 
