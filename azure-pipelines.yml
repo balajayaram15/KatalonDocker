@@ -15,3 +15,7 @@ steps:
   inputs:
     dockerVersion: '17.09.0-ce'
 
+    - task: katalonTask@0
+      inputs:
+        version: '7.0.0'
+
